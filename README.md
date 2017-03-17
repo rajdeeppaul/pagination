@@ -113,7 +113,7 @@ And suppose you want the URL to look like this:
         if(is_array($pgLinks) && count($pgLinks) && count($pgLinks['links'])){
             /* show pagination links */
             foreach($pgLinks['links'] as $link){
-                echo '<a href="example.php?page='.$link.'">'.$link.'</a> ';
+                echo '<a href="index.php?page='.$link.'">'.$link.'</a> ';
             }
         }
         if(is_array($pgLinks) && count($pgLinks) && $pgLinks['next']){
