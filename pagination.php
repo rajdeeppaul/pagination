@@ -22,7 +22,7 @@
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
 	
-	VERSION: 1.01
+	VERSION: 1.02
 	AUTHOR: Rajdeep Paul
 	*/
 	class Pagination{
@@ -73,7 +73,7 @@
 			if(!isset($this->queryString)){ $this->queryString = $queryString; }
 			if($paginationQuery){
 				if(!isset($this->currentPage)){
-					$this->currentPage = (is_array($getGlobalArray) && count($getGlobalArray) && isset($getGlobalArray[$key]) && is_numeric($getGlobalArray[$key])) ? $getGlobalArray[$key] : 1;
+					$this->currentPage = (is_array($getGlobalArray) && count($getGlobalArray) && isset($getGlobalArray[$key]) && is_numeric($getGlobalArray[$key]) && $getGlobalArray[$key] > 0) ? $getGlobalArray[$key] : 1;
 				}
 				$offset = ($this->currentPage - 1) * $this->rowsPerPage;
 				if(is_array($parameters)){
@@ -171,7 +171,7 @@
 			$totalRecords = count($resultSet);
 			if($totalRecords){
 				$totalPages = ceil($totalRecords / $this->rowsPerPage);
-				if($totalRecords > $this->rowsPerPage){
+				if($totalRecords > $this->rowsPerPage && $this->currentPage <= $totalPages){
 					$supersetRange = range(1, $totalPages);
 					if($this->numOfPaginationLinks % 2 == 0){
 						$pagesOnLeftSide = (int)(($this->numOfPaginationLinks - 1) / 2);
