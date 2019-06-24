@@ -13,6 +13,8 @@ The following usage documentation describes both MySQLi and PDO supported pagina
 
 ***
 
+<h2>Usage:</h2>
+
 Download `pagination.php` file into your project directory. Let's say your directory structure looks like this:
 
     project directory
@@ -27,7 +29,7 @@ And suppose you want the URL to look like this:
     http://example.com/index.php?page=5   // user is on page 5
     // etc ...
 
-<h2>index.php</h2>
+<h4>index.php</h4>
 
  1. Include `pagination.php` file in `index.php` page, like this:
 
