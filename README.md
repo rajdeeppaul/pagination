@@ -1,11 +1,9 @@
 # Pagination
 
-<p align="center">
-🎉 Generic pagination script(without JavaScript or any jQuery plugin) 🎉
-</p>
-<p align="center">
+Generic pagination script(without JavaScript or any jQuery plugin)
+
 New to pagination? Don't worry, I got you covered. Pagination is a simple as well as tough thing to grab on, <i>simple</i> because you know the concept of it, <i>tough</i> because you don't know how to implement it correctly. And don't worry? you're not the only one here who's having difficulty in implementing pagination, it has bugged me more than I could imagine. And after answering several questions on this topic on Stack Overflow, I finally decided to write a generic pagination script which is easy to use and, maybe, understand. So without wasting anymore time, let's dive into it.
-</p>
+
 
 ***
 
